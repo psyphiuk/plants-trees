@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect, useState } from 'react'
+import { useEffect, useState, Suspense } from 'react'
 import { useSearchParams } from 'next/navigation'
 import Link from 'next/link'
 import styles from './page.module.scss'
@@ -17,7 +17,7 @@ import {
 } from '@/lib/storage'
 import { t, detectLanguage, Language } from '@/lib/translations'
 
-export default function QuotePage() {
+function QuoteForm() {
   const searchParams = useSearchParams()
   const [language, setLanguage] = useState<Language>('en')
   const [currentStep, setCurrentStep] = useState(1)
@@ -179,7 +179,7 @@ export default function QuotePage() {
         <div className="container">
           <div className={styles.headerContent}>
             <Link href="/" className={styles.logo}>
-              {t('companyName', language)}
+              {t('siteName', language)}
             </Link>
             <div className={styles.headerRight}>
               {partnerName && (
@@ -540,5 +540,13 @@ export default function QuotePage() {
         </div>
       </main>
     </div>
+  )
+}
+
+export default function QuotePage() {
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <QuoteForm />
+    </Suspense>
   )
 }

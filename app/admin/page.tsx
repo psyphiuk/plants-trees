@@ -113,7 +113,7 @@ export default function AdminPage() {
                 autoFocus
               />
               {passwordError && (
-                <p className={styles.error}>Invalid password. Try 'admin123' for demo.</p>
+                <p className={styles.error}>Invalid password. Try &apos;admin123&apos; for demo.</p>
               )}
             </div>
             <button type="submit" className="btn btn-primary">

@@ -1,7 +1,7 @@
 export const translations = {
   en: {
     // Common
-    companyName: 'Southern High Farms',
+    siteName: 'Southern High Farms',
     next: 'Next',
     back: 'Back',
     submit: 'Submit Quote Request',
@@ -77,7 +77,7 @@ export const translations = {
   },
   es: {
     // Common
-    companyName: 'Southern High Farms',
+    siteName: 'Southern High Farms',
     next: 'Siguiente',
     back: 'Atrás',
     submit: 'Enviar Solicitud de Cotización',
