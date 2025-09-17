@@ -17,13 +17,13 @@ A modern marketplace platform connecting landscaping material suppliers with con
 corepack enable
 
 # Install dependencies
-yarn install
+corepack yarn install
 
 # Set up environment variables
 cp .env.example .env.local
 
 # Run development server
-yarn dev
+corepack yarn dev
 ```
 
 ## 📋 Features
@@ -57,18 +57,18 @@ yarn dev
        │                    │                    │
        ▼                    ▼                    ▼
 ┌─────────────┐     ┌─────────────┐     ┌─────────────┐
-│  Tailwind   │     │ PostgreSQL  │     │     CDN     │
-│     CSS     │     │   Storage   │     │   Caching   │
+│    SCSS     │     │ PostgreSQL  │     │     CDN     │
+│   Modules   │     │   Storage   │     │   Caching   │
 └─────────────┘     └─────────────┘     └─────────────┘
 ```
 
 ## 🛠️ Tech Stack
 
 - **Frontend**: Next.js 14 with TypeScript
-- **Styling**: Tailwind CSS
+- **Styling**: SCSS modules
 - **Database**: Supabase (PostgreSQL)
 - **Hosting**: Vercel
-- **Package Manager**: Yarn
+- **Package Manager**: Corepack Yarn
 
 ## 📁 Project Structure
 
@@ -113,16 +113,16 @@ NEXT_PUBLIC_APP_URL=https://yourdomain.com
 
 ### Local Development
 ```bash
-yarn dev        # Start development server
-yarn build      # Build for production
-yarn lint       # Run ESLint
-yarn type-check # Run TypeScript compiler
+corepack yarn dev        # Start development server
+corepack yarn build      # Build for production
+corepack yarn lint       # Run ESLint
+corepack yarn type-check # Run TypeScript compiler
 ```
 
 ### Database Migrations
 ```bash
-yarn supabase:migrate    # Run migrations
-yarn supabase:generate   # Generate types
+corepack yarn supabase:migrate    # Run migrations
+corepack yarn supabase:generate   # Generate types
 ```
 
 ## 🤝 Contributing

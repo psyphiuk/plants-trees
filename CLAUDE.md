@@ -12,8 +12,8 @@ This is a tree company automation project creating an Amazon-style marketplace f
 ## Technology Stack
 - **Framework**: Next.js on Vercel
 - **Database**: Supabase (PostgreSQL)
-- **Styling**: Tailwind CSS
-- **Package Manager**: Yarn (via corepack)
+- **Styling**: SCSS modules (NO Tailwind)
+- **Package Manager**: Corepack Yarn (NEVER use npm)
 - **Language**: TypeScript
 
 ## Core Features
@@ -100,7 +100,9 @@ This is a tree company automation project creating an Amazon-style marketplace f
 - Phased implementation approach
 
 ## Important Notes
-- Always use corepack yarn, never npm
+- **ALWAYS use `corepack yarn` for ALL package management - NEVER use `npm`**
+- **DO NOT use Tailwind CSS - use SCSS modules instead**
 - Prefer editing existing files over creating new ones
 - Focus on core automation before advanced features
 - Maintain simplicity for non-technical users
+- All yarn commands must be prefixed with `corepack`
